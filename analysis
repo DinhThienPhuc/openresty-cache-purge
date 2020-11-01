@@ -1,0 +1,23 @@
+41s 786ms // 100,000 keys
+2min 49s 782ms // 150,000 keys
+4min 50s 60ms // 200,000 keys
+21min 18s 857ms // 500,000 keys
+
+2s 650ms // 178,500 keys
+5s 384ms // 358,000 keys
+30s 645ms // 2,500,000 keys
+Thu Jul 23 2020 17:07:55 GMT+0700 (Indochina Time): 198ms
+Fri Jul 24 2020 10:54:04 GMT+0700 (Indochina Time): 19ms
+Fri Jul 24 2020 10:54:54 GMT+0700 (Indochina Time): 25ms
+Fri Jul 24 2020 11:22:32 GMT+0700 (Indochina Time): 28ms
+Fri Jul 24 2020 11:23:28 GMT+0700 (Indochina Time): 28ms
+Fri Jul 24 2020 14:20:59 GMT+0700 (Indochina Time): 33ms
+Fri Jul 24 2020 14:21:09 GMT+0700 (Indochina Time): 39ms
+Fri Jul 24 2020 14:34:08 GMT+0700 (Indochina Time): 28ms
+Fri Jul 24 2020 14:47:36 GMT+0700 (Indochina Time): 27ms
+Fri Jul 24 2020 15:00:40 GMT+0700 (Indochina Time): 29ms
+Fri Jul 24 2020 15:00:50 GMT+0700 (Indochina Time): 21ms
+Fri Jul 24 2020 15:01:00 GMT+0700 (Indochina Time): 22ms
+Fri Jul 24 2020 15:03:21 GMT+0700 (Indochina Time): 20ms
+Fri Jul 24 2020 15:09:11 GMT+0700 (Indochina Time): 27ms
+Tue Oct 06 2020 09:18:34 GMT+0700 (Indochina Time): 22ms

@@ -1,0 +1,46 @@
+worker_processes  2;
+
+events {
+  worker_connections 1024;
+}
+
+http {
+  upstream backend {
+    server 127.0.0.1:7777;
+  }
+
+  proxy_cache_path  /dev/shm keys_zone=tmpcache:10240m inactive=90d;
+  proxy_cache_valid any 48h;
+
+  server {
+    listen 4869;
+
+    default_type application/octet-stream;
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+    rewrite_log on;
+
+    access_log SOURCE_ROOT/logs/access.log;
+    error_log SOURCE_ROOT/logs/error.log warn;
+
+    location /test/ {
+      default_type text/html;
+      content_by_lua_block {
+        ngx.say(ngx.var.uri)
+      }
+    }
+
+    location / {
+      proxy_pass  http://backend/;
+      proxy_cache  tmpcache;
+      add_header X-Proxy-Cache $upstream_cache_status;
+      proxy_ignore_headers Set-Cookie;
+      proxy_cache_key  $host$uri$is_args$args;
+    }
+
+    location ~ /purge(/.*) {
+      proxy_cache_purge  tmpcache $host$1$is_args$args;
+    }
+  }
+}
