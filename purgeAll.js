@@ -1,8 +1,8 @@
 const axios = require('axios')
 const fs = require('fs')
 
-const url = 'http://192.168.6.90:8888/purge/*'
-const headers = { Host: 'hubesoft.com' }
+const url = process.env.URL_PURGE_ALL
+const headers = { Host: process.env.HOST_PURGE_ALL }
 // const headers = {}
 
 const purgeAll = async () => {
