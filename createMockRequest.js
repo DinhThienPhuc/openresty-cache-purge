@@ -1,7 +1,7 @@
 const axios = require('axios')
 
-const origin_url = 'http://10.5.20.102:4869/something'
-const headers = { Host: 'gamek.vn' }
+const origin_url = process.env.URL_ORIGIN
+const headers = { Host: process.env.HOST_ORIGIN }
 const LOOP_STEPS = 500
 const LOOP_STEPS_ARR = [...Array(LOOP_STEPS).keys()]
 

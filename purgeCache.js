@@ -1,7 +1,7 @@
 const axios = require('axios')
 
-const url = 'http://10.5.22.242:8792/purge/chang-trai-sinh-nam*'
-const headers = { Host: 'kenh14.vn' }
+const url = process.env.URL_PURGE_SINGLE
+const headers = { Host: process.env.HOST_PURGE_SINGLE }
 
 const purgeCache = async () => {
   try {
