@@ -2,7 +2,7 @@ const axios = require('axios')
 
 const origin_url = process.env.URL_ORIGIN
 const headers = { Host: process.env.HOST_ORIGIN }
-const LOOP_STEPS = 500
+const LOOP_STEPS = 80
 const LOOP_STEPS_ARR = [...Array(LOOP_STEPS).keys()]
 
 const createRandomString = () =>
